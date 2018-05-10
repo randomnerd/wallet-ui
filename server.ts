@@ -12,7 +12,7 @@ import { join } from 'path';
 const ip = require('my-local-ip')();
 
 
-const connectionTypes: Array<TConnection> = ['mainnet', 'testnet'];
+const connectionTypes: Array<TConnection> = ['mainnet', 'testnet', 'sqnet'];
 const buildTypes: Array<TBuild> = ['dev', 'normal', 'min'];
 
 const privateKey = readFileSync('localhost.key').toString();

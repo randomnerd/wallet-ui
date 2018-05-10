@@ -142,7 +142,7 @@ export function prepareHTML(param: IPrepareHTMLOptions): Promise<string> {
         readJSON(join(__dirname, './meta.json')) as Promise<IMetaJSON>
     ])
         .then(([file, pack, meta]) => {
-            const connectionTypes = ['mainnet', 'testnet'];
+            const connectionTypes = ['mainnet', 'testnet', 'sqnet'];
 
             if (!param.scripts) {
                 const sourceFiles = getFilesFrom(join(__dirname, '../src'), '.js', function (name, path) {

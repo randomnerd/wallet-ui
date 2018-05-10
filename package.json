@@ -77,9 +77,9 @@
     "lessc": "sh scripts/lessc",
     "build": "node_modules/.bin/tsc -p ./ && node_modules/.bin/gulp all",
     "server": "npm run build && node server",
-    "electron:linux": "electron-packager ./dist/desktop/mainnet/min/ --icon=./electron/icons/icon.png --platform=linux --out=./dist/linux",
-    "electron:win": "electron-packager ./dist/desktop/mainnet/min/ --icon=./electron/icons/icon.ico --platform=win32 --out=./dist/win",
-    "electron:osx": "electron-packager ./dist/desktop/mainnet/min/ --icon=./electron/icons/icon.icns --platform=darwin --out=./dist/osx",
+    "electron:linux": "electron-packager ./dist/desktop/sqnet/min/ --icon=./electron/icons/icon.png --platform=linux --out=./dist/linux",
+    "electron:win": "electron-packager ./dist/desktop/sqnet/min/ --icon=./electron/icons/icon.ico --platform=win32 --out=./dist/win",
+    "electron:osx": "electron-packager ./dist/desktop/sqnet/normal/ --icon=./electron/icons/icon.icns --platform=darwin --out=./dist/osx",
     "electron": "gulp all && npm run electron:linux && npm run electron:win && npm run electron:osx",
     "electron-debug": "gulp html-desktop-mainnet-min && node_modules/.bin/electron ./dist/desktop/mainnet/min/ --inspect"
   },
@@ -94,7 +94,6 @@
     "angular-ui-router": "1.0.3",
     "bignumber.js": "4.1.0",
     "clipboard": "1.7.1",
-    "papaparse": "4.3.7",
     "d3": "3.5.17",
     "i18next": "9.1.0",
     "i18next-locize-backend": "1.2.1",
@@ -104,10 +103,12 @@
     "mousetrap": "1.6.1",
     "n3-charts": "2.0.28",
     "ng-i18next": "1.0.5",
+    "papaparse": "4.3.7",
     "parse-json-bignumber": "0.0.2",
     "qrcode-reader": "1.0.3",
     "ts-api-validator": "2.1.2",
     "ts-utils": "6.0.1",
+    "waves-api": "^0.24.2",
     "worker-wrapper": "1.2.2"
   }
 }

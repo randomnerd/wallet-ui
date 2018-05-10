@@ -8,6 +8,7 @@ export interface IMetaJSON {
     debugInjections: Array<string>;
     electronScripts: Array<string>;
     configurations: {
+        sqnet: IConfItem;
         testnet: IConfItem;
         mainnet: IConfItem;
     };
@@ -53,7 +54,7 @@ export interface IConfItem {
     datafeed: string;
 }
 
-export type TConnection = 'mainnet' | 'testnet';
+export type TConnection = 'mainnet' | 'testnet' | 'sqnet';
 export type TBuild = 'dev' | 'normal' | 'min';
 export type TPlatform = 'web' | 'desktop';
 

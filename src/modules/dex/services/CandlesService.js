@@ -118,10 +118,10 @@
             static _getCandles(symbolInfo, from, to = Date.now(), resolution) {
                 const amountId = symbolInfo._wavesData.amountAsset.id;
                 const priceId = symbolInfo._wavesData.priceAsset.id;
-                const interval = CandlesService._normalizeInterval(resolution);
+                // const interval = CandlesService._normalizeInterval(resolution);
 
-                const path = `${WavesApp.network.api}/candles/${amountId}/${priceId}`;
-                return fetch(`${path}?timeStart=${from}&timeEnd=${to}&interval=${interval}`)
+                const path = `${WavesApp.network.datafeed}/candles/${amountId}/${priceId}`;
+                return fetch(`${path}/${parseInt(resolution, 10)}/${from}/${to}`)
                     .then((res) => res.candles);
             }
 

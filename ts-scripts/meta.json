@@ -128,7 +128,7 @@
       "static/localization/translations/zh_TW.json"
     ]
   },
-  "domain": "https://beta.wavesplatform.com",
+  "domain": "https://waves.k.random.st",
   "copyNodeModules": [
     "node_modules/qrcode-reader/dist/index.min.js"
   ],
@@ -143,7 +143,7 @@
     "defaults": {
       "main": "main.js"
     },
-    "server": "desktop.wavesplatform.com"
+    "server": "waves.k.random.st"
   },
   "configurations": {
     "testnet": {
@@ -166,6 +166,19 @@
         "DASH": "no-asset-id",
         "EFYT": "no-asset-id",
         "WNET": "no-asset-id"
+      }
+    },
+    "sqnet": {
+      "code": "S",
+      "node": "https://waves.k.random.st/node",
+      "matcher": "https://waves.k.random.st/matcher",
+      "api": "https://waves.k.random.st/datafeed",
+      "coinomat": "https://test.coinomat.com",
+      "datafeed": "https://waves.k.random.st/datafeed",
+      "support": "https://support.wavesplatform.com",
+      "assets": {
+        "BTC": "t3zxoFBZmfrX67oHQ1khmdqAsLGa1wu2zaHSAVBL2ug",
+        "LTC": "G64gxPaz9UZLYmrzDWH8xZsC3Sw4hQxRUb6fVqteDScB"
       }
     },
     "mainnet": {
