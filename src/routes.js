@@ -16,6 +16,7 @@ export default {
     '/wallet/new': { name: 'new_wallet', render: <WalletForm/> },
     '/login': { name: 'login', render: <LoginForm/> },
     '/ops': { name: 'operations', render: <OperationList/> },
+    '/ops/:symbol/:uid': { name: 'operations_sym_uid', render: <OperationList/> },
     '/op/wallet/:wid': { name: 'operations_by_wallet', render: <OperationList/> },
     '/op/:kind/:symbol/:uid': { name: 'operation', render: <Operation/> },
     '/withdraw/:symbol/:uid': { name: 'withdraw', render: <Withdraw/> }
