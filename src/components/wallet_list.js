@@ -22,11 +22,21 @@ class Wallet extends Component {
                 <Table.Cell className="monospace">{w.address}</Table.Cell>
                 <Table.Cell textAlign="right">
                     <Button.Group size="mini">
-                        <Button onClick={() => router.push(`/op/take/${w.symbol}/${w.uid}`)}>Take</Button>
-                        <Button onClick={() => router.push(`/op/put/${w.symbol}/${w.uid}`)}>Put</Button>
-                        <Button onClick={() => router.push(`/withdraw/${w.symbol}/${w.uid}`)}>Withdraw</Button>
-                        <Button onClick={() => router.push(`/op/wallet/${w.id}`)}>Operations</Button>
-                        <Button onClick={() => this.newAddress()}>New address</Button>
+                        <Button onClick={() => router.push(`/op/take/${w.symbol}/${w.uid}`)}>
+                            <Icon name="arrow up" /> Take
+                        </Button>
+                        <Button onClick={() => router.push(`/op/put/${w.symbol}/${w.uid}`)}>
+                            <Icon name="arrow down" /> Put
+                        </Button>
+                        <Button onClick={() => router.push(`/withdraw/${w.symbol}/${w.uid}`)}>
+                            <Icon name="money" /> Withdraw
+                        </Button>
+                        <Button onClick={() => router.push(`/op/wallet/${w.id}`)}>
+                            <Icon name="exchange" /> Operations
+                        </Button>
+                        <Button onClick={() => this.newAddress()}>
+                            <Icon name="refresh" /> New address
+                        </Button>
                     </Button.Group>
                 </Table.Cell>
             </Table.Row>
