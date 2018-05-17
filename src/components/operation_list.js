@@ -14,7 +14,11 @@ class OperationRow extends Component {
                 <Table.Cell className="monospace" textAlign="right">{op.kind.toUpperCase()}</Table.Cell>
                 <Table.Cell className="monospace" textAlign="center">{parseFloat(op.value).toFixed(4)}</Table.Cell>
                 <Table.Cell className="monospace">{op.symbol.toUpperCase()}</Table.Cell>
-                <Table.Cell className="monospace"><pre>{JSON.stringify(op.meta, null, 4)}</pre></Table.Cell>
+                <Table.Cell className="monospace">
+                    <pre style={{maxWidth: 650, overflowX: 'auto'}}>
+                        {JSON.stringify(op.meta, null, 4)}
+                    </pre>
+                </Table.Cell>
                 <Table.Cell><abbr title={moment(op.ts).toString()}>{moment(op.ts).fromNow()}</abbr></Table.Cell>
             </Table.Row>
         );
