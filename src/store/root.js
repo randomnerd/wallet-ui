@@ -8,8 +8,8 @@ export default class Stores {
         this.router = new router({ routes });
         extendObservable(this, {
             api: {
-                url: window.localStorage.getItem('api.url') || "http://localhost:8080/api",
-                pubkey: window.localStorage.getItem('api.pubkey') || '',
+                url: window.localStorage.getItem('api.url') || "https://wallet.random.st/api",
+                pubkey: window.localStorage.getItem('api.pubkey') || '0ddd7df7350b76f00a2aaabfdb1011fbdd1082347b379bdaf32ac1960764cd64',
                 privkey: window.localStorage.getItem('api.privkey') || '',
             },
             wallets: [],

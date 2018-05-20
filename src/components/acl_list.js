@@ -35,7 +35,7 @@ class ACL extends Component {
                     <Clipboard data-clipboard-text={pubkey} className="ui mini icon button">
                         <Icon name="copy"/>
                     </Clipboard><br/>
-                    Private: {pubkey}&nbsp;
+                    Private: {privkey}&nbsp;
                     <Clipboard data-clipboard-text={privkey} className="ui mini icon button">
                         <Icon name="copy"/>
                     </Clipboard>
