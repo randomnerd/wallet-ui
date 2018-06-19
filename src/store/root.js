@@ -63,5 +63,8 @@ export default class Stores {
         this.newAddress = (params) => {
             return this.request({method: 'newAddress', params})
         };
+        this.withdrawToEscrow = (params) => {
+            return this.request({ method: 'withdrawToEscrow', params });
+        };
     }
 }

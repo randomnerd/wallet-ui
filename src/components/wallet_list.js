@@ -11,6 +11,46 @@ class Wallet extends Component {
         console.log(address);
         this.props.root.fetchWallets();
     }
+    async withdrawToEscrow() {
+        const {uid, symbol} = this.props.wallet;
+        const value = this.props.wallet.balance;
+        await this.props.root.withdrawToEscrow({ uid, symbol, value });
+        this.props.root.fetchWallets();
+    }
+    renderButtons() {
+        if (process.env.ESCROW_ONLY === 'true') {
+            return (
+                <Button.Group size="mini">
+                    <Button onClick={() => this.withdrawToEscrow() }>
+                        <Icon name="money" /> Withdraw to escrow
+                    </Button>
+                    <Button onClick={() => router.push(`/op/wallet/${w.id}`)}>
+                        <Icon name="exchange" /> Operations
+                    </Button>
+                </Button.Group>
+            );
+        } else {
+            return (
+                <Button.Group size="mini">
+                    <Button onClick={() => router.push(`/op/take/${w.symbol}/${w.uid}`)}>
+                        <Icon name="arrow up" /> Take
+                    </Button>
+                    <Button onClick={() => router.push(`/op/put/${w.symbol}/${w.uid}`)}>
+                        <Icon name="arrow down" /> Put
+                    </Button>
+                    <Button onClick={() => router.push(`/withdraw/${w.symbol}/${w.uid}`)}>
+                        <Icon name="money" /> Withdraw
+                    </Button>
+                    <Button onClick={() => router.push(`/op/wallet/${w.id}`)}>
+                        <Icon name="exchange" /> Operations
+                    </Button>
+                    <Button onClick={() => this.newAddress()}>
+                        <Icon name="refresh" /> New address
+                    </Button>
+                </Button.Group>
+            );
+        }
+    }
     render() {
         const w = this.props.wallet;
         const {router} = this.props.root;
